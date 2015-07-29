@@ -7,11 +7,18 @@
    </head>
    <body ng-controller='MainController as vm'>
 
+      <!-- {{vm.users}} -->
+
+      <div ng-repeat="user in vm.users">
+         <h1 class='profile-line'> <img src="{{user.avatar}}" alt="User Thumbnail" />
+         {{user.first_name}} {{user.last_name}}</h1>
+
+      </div>
 
       <script type="text/javascript" src='node_modules/angular/angular.js'></script>
 
       <script type="text/javascript" src='js/app.js'></script>
       <script type="text/javascript" src='js/MainController.js'></script>
-      <script type="text/javascript" src='js/service.js'></script>
+      <script type="text/javascript" src='js/mainService.js'></script>
    </body>
 </html>
